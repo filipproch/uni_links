@@ -19,6 +19,11 @@ Future<String> getInitialLink() async {
   return initialLink;
 }
 
+Future<String> getLatestLink() async {
+  final String latestLink = await _mChannel.invokeMethod('getLatestLink');
+  return latestLink;
+}
+
 /// A convenience method that returns the initially stored link
 /// as a new [Uri] object.
 ///
